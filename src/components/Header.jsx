@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FiMenu } from 'react-icons/fi';
+import Setting from '../pages/Setting';
+import { Link } from "react-router-dom";
+
 
 const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     position: absolute;
-    padding: 0.2em;
+    padding: 0.3em;
     height: 3em;
     width: 100%;
     color: #8a8c8f;
@@ -23,7 +25,10 @@ const Header = () => {
     return (
         <Wrapper>
             <h2 style={{ margin: '0.3em' }}>CHAE</h2>
-            <FontAwesomeIcon icon={faBars} style={{ margin: '0.9em' }} />
+            <Link to="/setting">
+                <FiMenu size={"2em"} />
+            </Link>
+
         </Wrapper>
     )
 }

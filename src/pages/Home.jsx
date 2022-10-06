@@ -3,19 +3,15 @@ import styled from "styled-components";
 import Header from '../components/Header';
 import Nav from "../components/Nav";
 
-
 const Main = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 `;
 
-const ChartList = styled.div`
-    display: flex ;
-    flex-direction: column;
-`;
+const Home = () => {
 
-const Home = (): JSX.Element => {
 
     return (
         <Main>
