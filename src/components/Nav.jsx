@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai';
 import { BiSearchAlt2 } from 'react-icons/bi';
@@ -21,8 +22,12 @@ const Nav = () => {
     return (
         <Wrapper>
             <AiOutlineHome size={"2em"} />
-            <BiSearchAlt2 size={"2em"} />
-            <AiOutlineUser size={"2em"} />
+            <Link to="/search">
+                <BiSearchAlt2 size={"2em"} />
+            </Link>
+            <Link to="/player">
+                <AiOutlineUser size={"2em"} />
+            </Link>
         </Wrapper>
     )
 }

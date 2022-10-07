@@ -60,12 +60,13 @@ const Setting = () => {
         <Wrapper>
             <Header />
             <MyPage>1</MyPage>
-            <PaidServiceLeft>2</PaidServiceLeft>
-            <PaidServiceRight>3</PaidServiceRight>
-            <NoticeMenu1>4</NoticeMenu1>
-            <NoticeMenu2>5</NoticeMenu2>
-            <NoticeMenu3>6</NoticeMenu3>
-            <NoticeMenu4>7</NoticeMenu4>
+            <PaidServiceLeft>이용권 구매</PaidServiceLeft>
+            <PaidServiceRight>CHAE 라운지</PaidServiceRight>
+            <MyPage>스페셜 기프트</MyPage>
+            <NoticeMenu1>설정</NoticeMenu1>
+            <NoticeMenu2>이벤트</NoticeMenu2>
+            <NoticeMenu3>공지사항</NoticeMenu3>
+            <NoticeMenu4>고객센터</NoticeMenu4>
             <Nav />
         </Wrapper>
 

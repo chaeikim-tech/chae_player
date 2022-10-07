@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 import { FiMenu } from 'react-icons/fi';
-import Setting from '../pages/Setting';
 import { Link } from "react-router-dom";
 
 
