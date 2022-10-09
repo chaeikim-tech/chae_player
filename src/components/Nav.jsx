@@ -22,7 +22,9 @@ const Wrapper = styled.div`
 const Nav = () => {
     return (
         <Wrapper>
-            <AiOutlineHome size={"2em"} />
+            <Link to="/" >
+                <AiOutlineHome size={"2em"} />
+            </Link>
             <Link to="/search">
                 <BiSearchAlt2 size={"2em"} />
             </Link>

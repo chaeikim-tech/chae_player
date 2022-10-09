@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import styled from "styled-components";
 import Header from '../components/Header';
 import Nav from "../components/Nav";
