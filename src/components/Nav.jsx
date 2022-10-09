@@ -15,6 +15,7 @@ const Wrapper = styled.div`
     color: #8a8c8f;
     border-top: 1px solid #dee5e7;
     background-color: #f2f2f2;
+    left:0;
     bottom:0;
 `;
 

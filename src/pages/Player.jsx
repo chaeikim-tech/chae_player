@@ -6,7 +6,10 @@ import { RiPlayList2Fill } from "react-icons/ri";
 import { MdTune } from "react-icons/md";
 
 const Wrapper = styled.div`
-    padding: 1em 2em;
+    background-color: #0C2D48;
+    color:#B1D4E0;
+    padding: 1rem 2rem;
+    height: 100vh;
 `;
 
 const MusicAlign = styled.div`
@@ -35,7 +38,6 @@ const MusicTimeline = styled(MusicAlign)`
 `;
 
 const MusicBtn = styled(MusicAlign)`
-    color: black;
 `;
 
 const Player = () => {
