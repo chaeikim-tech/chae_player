@@ -6,15 +6,40 @@ import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
     display: flex;
-    justify-content: space-between;
-    position: absolute;
-    padding: 0.3em;
-    height: 3em;
-    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    width:100%;
     color: #8a8c8f;
     border-bottom: 1px solid #dee5e7;
     background-color: #f2f2f2;
     top: 0;
+
+    h2{
+        letter-spacing: 5px;
+        font-size: 25px;
+        font-weight: bold;
+        
+    }
+    .navLinks{
+        display:flex;
+        justify-content: space-around;
+        width: 30%;
+        @media (max-width: 1024px){
+            width: 60%;
+        };
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+    }
+    .burgerMenu{
+        display:none;
+    }
 `;
 
 
@@ -23,10 +48,14 @@ const Header = () => {
 
     return (
         <Wrapper>
-            <h2 style={{ margin: '0.3em' }}>CHAE</h2>
-            <Link to="/setting">
-                <FiMenu size={"2em"} />
-            </Link>
+            <h2>CHAE</h2>
+            <ul className="navLinks">
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/">Chart</Link></li>
+                <li><Link to="/">Playlist</Link></li>
+                <li><Link to="/">Setting</Link></li>
+            </ul>
+            <FiMenu className="burgerMenu" />
 
         </Wrapper>
     )

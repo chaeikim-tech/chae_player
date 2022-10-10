@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai';
 import { BiSearchAlt2 } from 'react-icons/bi';
 
-
 const Wrapper = styled.div`
     display: flex;
     justify-content: space-around;

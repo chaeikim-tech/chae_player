@@ -17,7 +17,6 @@ const RootDiv = styled.div`
   color:#B1D4E0;
   height: 100vh;
   overflow: hidden;
-  padding: 1rem 1.4rem;
 `;
 
 export default function App() {
