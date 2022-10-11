@@ -28,6 +28,16 @@ const Wrapper = styled.div`
         @media (max-width: 1024px){
             width: 60%;
         };
+        @media (max-width: 768px){
+            position: absolute;
+            right:0px;
+            height: 92vh;
+            top: 8vh;
+            display:flex;
+            flex-direction:column;
+            background-color: #f2f2f2;
+
+        };
         li{
             list-style: none;
         }
