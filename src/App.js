@@ -13,8 +13,7 @@ import Setting from "./pages/Setting";
 import Player from "./pages/Player";
 
 const RootDiv = styled.div`
-  background-color: #0C2D48;
-  color:#B1D4E0;
+  background-color: #FFF;
   height: 100vh;
   overflow: hidden;
 `;

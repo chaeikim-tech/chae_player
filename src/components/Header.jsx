@@ -39,7 +39,7 @@ const Wrapper = styled.div`
             align-items:center;
             background-color: #f2f2f2;
             transform: translateX(100%);
-            transition: transform 0.5s ease-in;
+            transition: transform 0.3s ease-in;
         };
         li{
             list-style: none;
@@ -101,9 +101,9 @@ const Header = () => {
             <h2>CHAE</h2>
             <ul className="navLinks">
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/">Chart</Link></li>
-                <li><Link to="/">Playlist</Link></li>
-                <li><Link to="/">Setting</Link></li>
+                <li><Link to="/chart">Chart</Link></li>
+                <li><Link to="/player">Player</Link></li>
+                <li><Link to="/setting">Setting</Link></li>
             </ul>
             <FiMenu className="burgerMenu" onClick={NavSlide} />
         </Wrapper>
