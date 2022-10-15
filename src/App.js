@@ -6,14 +6,9 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-
 import Home from "./pages/Home";
-import Search from './pages/Search';
-import Setting from "./pages/Setting";
-import Player from "./pages/Player";
 
 const RootDiv = styled.div`
-  background-color: #FFF;
   height: 100vh;
   overflow: hidden;
 `;
@@ -26,9 +21,6 @@ export default function App() {
         <Router>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/setting' element={<Setting />} />
-            <Route path='/search' element={<Search />} />
-            <Route path='/player' element={<Player />} />
           </Routes>
         </Router>
       </RootDiv>

@@ -1,65 +1,72 @@
 import styled from "styled-components";
-import { FaPlay, FaPause } from 'react-icons/fa';
-import { IoIosArrowDown } from "react-icons/io";
-import { IoPlaySkipBack, IoPlaySkipForward, IoHeartOutline } from 'react-icons/io5';
-import { RiPlayList2Fill } from "react-icons/ri";
-import { MdTune } from "react-icons/md";
+import { ImPlay2, ImPause } from "react-icons/im"
+
 
 const Wrapper = styled.div`
-    background-color: #0C2D48;
-    color:#B1D4E0;
-    padding: 1rem 2rem;
-    height: 100vh;
-`;
-
-const MusicAlign = styled.div`
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-`;
-
-const MusicInfoTitle = styled(MusicAlign)``;
-
-const MusicInfoSubtitle = styled(MusicAlign)``;
-
-const MusicImg = styled(MusicAlign)`
     display: flex;
     justify-content: center;
-    img{
-        width: 300px;
-        height: 300px;
-        margin: 50px;
-        border-radius: 10px;
+    align-items: center;
+    position:fixed;
+    width: 60%;
+    min-height: 100vh;
+    right:0;
+    top: 8vh;
+`;
+
+const MusicContainer = styled.div`
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(125deg, #00416A 0%, #E4E5E6 100%);
+    border-radius: 15px;
+    width: 500px;
+    height: 500px;
+    cursor: pointer;
+`;
+
+const ImgContainer = styled.div`
+    position: relative;
+    display: inline-block;
+`
+
+const MusicImg = styled.img`
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+`
+
+const StyledHiPlay = styled(ImPlay2)`
+    display:none;
+    position: absolute;
+    top: 70px;
+    right: 70px;
+    ${MusicContainer}:hover & {
+        display: block;
+        filter:drop-shadow(white 8px 5px 10px)
     }
-`;
 
-const MusicTimeline = styled(MusicAlign)`
+`
+const MusicText = styled.div`
+    display: flex;
+    flex-direction: column;
+`
 
-`;
-
-const MusicBtn = styled(MusicAlign)`
-`;
 
 const Player = () => {
     return (
         <Wrapper>
-            <MusicInfoTitle>
-                <h3>Welcome To My Playground</h3>
-                <IoIosArrowDown size={24} />
-            </MusicInfoTitle>
-            <MusicInfoSubtitle>
-
-            </MusicInfoSubtitle>
-            <MusicImg>
-                <img src='https://image.yes24.com/goods/66904853/XL' />
-            </MusicImg>
-            <MusicBtn>
-                <RiPlayList2Fill size={34} />
-                <IoPlaySkipBack size={34} />
-                <FaPlay size={34} />
-                <IoPlaySkipForward size={34} />
-                <MdTune size={34} />
-            </MusicBtn>
+            <MusicContainer>
+                <ImgContainer>
+                    <MusicImg src={"https://image.yes24.com/goods/66904853/XL"} />
+                    <StyledHiPlay size={50} />
+                </ImgContainer>
+                <MusicText>
+                    <span>Welcome To My Playground</span>
+                    <span>NCT 127</span>
+                </MusicText>
+            </MusicContainer>
         </Wrapper>
     )
 }

@@ -49,6 +49,7 @@ a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
 a:focus { text-decoration: none; }
 a:hover, a:active { text-decoration: none; }
+input:focus {outline: none;}
 `;
 
 export default GlobalStyle;

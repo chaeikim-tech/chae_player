@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import { FiMenu } from 'react-icons/fi';
+import { BiSearchAlt2 } from 'react-icons/bi';
 import { Link } from "react-router-dom";
 
 
@@ -8,104 +8,47 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position:fixed;
     min-height: 8vh;
     width:100%;
+    background-color: white; 
     color: #8a8c8f;
-    border-bottom: 1px solid #dee5e7;
-    background-color: #f2f2f2;
     top: 0;
-
+    z-index: 1;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
     h2{
         letter-spacing: 5px;
         font-size: 25px;
         font-weight: bold;
-        
-    }
-    .navLinks{
-        display:flex;
-        justify-content: space-around;
-        width: 30%;
-        @media (max-width: 1024px){
-            width: 60%;
-        };
-        @media (max-width: 768px){
-            position: absolute;
-            right:0px;
-            width: 50%;
-            height: 92vh;
-            top: 8vh;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            background-color: #f2f2f2;
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in;
-        };
-        li{
-            list-style: none;
-            @media (max-width: 768px){
-                opacity: 0;
-        };
-        }
-        a{
-            text-decoration: none;;
-            letter-spacing: 2px;
-            font-weight: bold;
-        }
-    }
-    .burgerMenu{
-        display:none;
-        cursor: pointer;
-         @media (max-width: 768px){
-            display: block;
-        };
-    }
-    .navAcitve{
-        transform: translateX(0%);
-    }
-
-    @keyframes navLinkFade{
-        from{
-            opacity:0;
-            transform: translateX(50px);
-        }
-        to{
-            opacity:1;
-            transform: translateX(0px);
-        }
     }
 `;
+
+const SearchContainer = styled.div`
+    display: flex;
+    align-items: center;
+    height: 4vh;
+    width: 300px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid ;
+    input{
+        border: none;
+        font-size: 16px;
+    }
+`
 
 
 
 const Header = () => {
 
-    const NavSlide = () => {
-        const burger = document.querySelector('FiMenu');
-        const nav = document.querySelector(".navLinks");
-        const navLinks = document.querySelectorAll('.navLinks li')
-
-        nav.classList.toggle('navAcitve');
-        navLinks.forEach((link, index) => {
-            if (link.style.animation) {
-                link.style.animation = '';
-            } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 1.5}s`
-            }
-        })
-
-    }
 
     return (
         <Wrapper>
             <h2>CHAE</h2>
-            <ul className="navLinks">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/chart">Chart</Link></li>
-                <li><Link to="/player">Player</Link></li>
-                <li><Link to="/setting">Setting</Link></li>
-            </ul>
-            <FiMenu className="burgerMenu" onClick={NavSlide} />
+            <SearchContainer>
+                <BiSearchAlt2 size={25} style={{ padding: "0 8px" }} />
+                <input />
+            </SearchContainer>
         </Wrapper>
     )
 }

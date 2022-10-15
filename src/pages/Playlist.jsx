@@ -6,7 +6,8 @@ const Wrapper = styled.div`
     top: 8vh;
     width: 40%;
     min-height: 100vh;
-    background-color: #a21f1f33;
+    position:absolute;
+    overflow-x: scroll;
 `;
 
 const MusicComp = styled.div`
@@ -14,10 +15,11 @@ const MusicComp = styled.div`
     align-items: center;
     margin: 20px 10px;
     padding: 5px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
     &:hover{
-        margin: 10px;
-        background-color: rgba(255,255,255, 0.2);
-        border-radius: 20px;
+        margin: 19.5px;
+        background-color: rgba(255,255,255, 0.7);
+        border-radius: 10px;
         cursor: pointer;
     }
 `
