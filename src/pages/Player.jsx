@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import styled from "styled-components";
 import { ImPlay2, ImPause } from "react-icons/im"
 
@@ -37,34 +38,53 @@ const MusicImg = styled.img`
     border-radius: 10px;
 `
 
-const StyledHiPlay = styled(ImPlay2)`
+const StyledImPlay = styled(ImPlay2)`
     display:none;
     position: absolute;
-    top: 70px;
-    right: 70px;
+    top: 65px;
+    right: 65px;
     ${MusicContainer}:hover & {
         display: block;
         filter:drop-shadow(white 8px 5px 10px)
     }
 
 `
+
+const StyledImPause = styled(ImPause)`
+    display:none;
+    position: absolute;
+    top: 65px;
+    right: 65px;
+    ${MusicContainer}:hover & {
+        display: block;
+        filter:drop-shadow(white 8px 5px 10px)
+    }
+
+`
+
 const MusicText = styled.div`
     display: flex;
     flex-direction: column;
 `
 
 
-const Player = () => {
+const Player = (props) => {
+    const [isPlaying, setIsPlaying] = useState(true);
+
+    const togglePlay = () => {
+        setIsPlaying(!isPlaying)
+    }
+
     return (
         <Wrapper>
-            <MusicContainer>
+            <MusicContainer onClick={togglePlay}>
                 <ImgContainer>
                     <MusicImg src={"https://image.yes24.com/goods/66904853/XL"} />
-                    <StyledHiPlay size={50} />
+                    {isPlaying ? <StyledImPlay size={70} /> : <StyledImPause size={70} />}
                 </ImgContainer>
                 <MusicText>
-                    <span>Welcome To My Playground</span>
-                    <span>NCT 127</span>
+                    <div style={{ fontSize: "22px", fontWeight: "600" }}>Welcome To My Playground</div>
+                    <div style={{ fontSize: "15px", fontWeight: "600", paddingTop: "18px" }}>NCT 127</div>
                 </MusicText>
             </MusicContainer>
         </Wrapper>
