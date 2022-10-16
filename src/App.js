@@ -6,6 +6,7 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 import Home from "./pages/Home";
 
 const RootDiv = styled.div`
@@ -15,7 +16,7 @@ const RootDiv = styled.div`
 
 export default function App() {
   return (
-    <>
+    <RecoilRoot>
       <GlobalStyle />
       <RootDiv>
         <Router>
@@ -24,6 +25,6 @@ export default function App() {
           </Routes>
         </Router>
       </RootDiv>
-    </>
+    </RecoilRoot>
   )
 }

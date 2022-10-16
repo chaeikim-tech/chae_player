@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { isPlayingAtom } from '../atom';
+import { useRecoilState } from 'recoil';
 import styled from "styled-components";
 import { ImPlay2, ImPause } from "react-icons/im"
 
@@ -69,7 +71,7 @@ const MusicText = styled.div`
 
 
 const Player = (props) => {
-    const [isPlaying, setIsPlaying] = useState(true);
+    const [isPlaying, setIsPlaying] = useRecoilState(isPlayingAtom);
 
     const togglePlay = () => {
         setIsPlaying(!isPlaying)
