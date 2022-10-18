@@ -41,26 +41,17 @@ const MusicImg = styled.img`
 `
 
 const StyledImPlay = styled(ImPlay2)`
-    display:none;
     position: absolute;
     top: 65px;
     right: 65px;
-    ${MusicContainer}:hover & {
-        display: block;
-        filter:drop-shadow(white 8px 5px 10px)
-    }
-
+    filter:drop-shadow(white 8px 5px 10px);
 `
 
 const StyledImPause = styled(ImPause)`
-    display:none;
     position: absolute;
     top: 65px;
     right: 65px;
-    ${MusicContainer}:hover & {
-        display: block;
-        filter:drop-shadow(white 8px 5px 10px)
-    }
+    filter:drop-shadow(white 8px 5px 10px);
 
 `
 
