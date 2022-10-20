@@ -11,8 +11,6 @@ const Main = styled.div`
 
 const Home = () => {
 
-
-
     return (
         <Main>
             <Header />

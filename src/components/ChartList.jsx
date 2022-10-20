@@ -72,10 +72,10 @@ const ChartList = () => {
     return (
         <>
             {chartProducts?.map((item, idx) => (
-                <MusicComp key={item.key}>
+                <MusicComp key={item.key} >
                     <span style={{ fontSize: 22, fontWeight: 700, paddingRight: "35px" }}>{idx + 1}</span>
                     <ImgContainer onClick={togglePlay}>
-                        <MusicImg src={item.images.coverart} />
+                        <MusicImg src={item.images?.coverart} />
                         {isPlaying ? <StyledImPlay size={40} /> : <StyledImPause size={40} />}
                     </ImgContainer>
                     <MusicText>
@@ -83,7 +83,9 @@ const ChartList = () => {
                         <div style={{ fontSize: 15, fontWeight: 600 }}>{item.subtitle}</div>
                     </MusicText>
                 </MusicComp>
-            ))}
+            )
+            )
+            }
         </>
     )
 }
